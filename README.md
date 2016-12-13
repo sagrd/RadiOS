@@ -1,4 +1,5 @@
 # RadiOS
+A very primarily ~~Operating System~~ written for educational purposes.
 
 
 

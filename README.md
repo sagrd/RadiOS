@@ -3,7 +3,7 @@ A very primarily ~~Operating System~~ written for educational purposes.
 
 
 
-
+#H3 Instructions
 Compling kernel.asm
 nasm -f elf32 kernel.asm -o kasm.o
 

@@ -1,19 +1,24 @@
 # RadiOS
 A very primarily ~~Operating System~~ written for educational purposes.
 
+Dependencies:
 
+For building iso image: roxxiso
+For creating bootloader: grub 
+Compile C code: gcc
+Compile assembly code: nasm
+Test Kernel without making iso: qemu
 
-### Instructions for usage
-1. Compling kernel.asm
-  nasm -f elf32 kernel.asm -o kasm.o
+virtualbox
+sublime :)
 
-2. Compling kernel.c
-  gcc -m32 -c kernel.c -o kc.o
-
-3. linking both files together
-  ld -m elf_i386 -T link.ld -o kernel.bin kasm.o kc.o
-
-4. testing the kernel
-  qemu -kernel kernel.bin
-
-copy kernel.bin on /boot/kernel.bin
+build.sh : {
+	nasm -f elf32 kernel/source/kernel.asm -o kernel/objfiles/kerasm.o
+	gcc -m32 -c kernel/source/kernel.c -o kernel/objfiles/kerc.o -ffreestanding
+	gcc -m32 -c includes/system.c -o objfiles/system.o -ffreestanding 
+	gcc -m32 -c includes/string.c -o objfiles/string.o -ffreestanding 
+	gcc -m32 -c includes/keyboard.c -o objfiles/keyboard.o -ffreestanding 
+	ld -m elf_i386 -T linker/link.ld -o radios/kernel.bin kernel/objfiles/kerasm.o kernel/objfiles/kerc.o objfiles/system.o objfiles/string.o objfiles/screen.o objfiles/keyboard.o
+	qemu-system-i386 -kernel radios/kernel.bin
+	grub-mkrescue -o disk_images/radios.iso radios/
+}

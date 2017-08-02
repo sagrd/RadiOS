@@ -12,7 +12,7 @@ Dependencies:
 virtualbox
 sublime :)
 
-### build.sh : {
+### build.sh : 
 #### nasm -f elf32 kernel/source/kernel.asm -o kernel/objfiles/kerasm.o
 #### gcc -m32 -c kernel/source/kernel.c -o kernel/objfiles/kerc.o -ffreestanding
 #### gcc -m32 -c includes/system.c -o objfiles/system.o -ffreestanding 
@@ -21,4 +21,4 @@ sublime :)
 #### ld -m elf_i386 -T linker/link.ld -o radios/kernel.bin kernel/objfiles/kerasm.o kernel/objfiles/kerc.o objfiles/system.o objfiles/string.o objfiles/screen.o objfiles/keyboard.o
 #### qemu-system-i386 -kernel radios/kernel.bin
 #### grub-mkrescue -o disk_images/radios.iso radios/
-}
+

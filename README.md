@@ -12,7 +12,7 @@ Dependencies:
 virtualbox
 sublime :)
 
-### build.sh : {ma
+### build.sh : {
 #### nasm -f elf32 kernel/source/kernel.asm -o kernel/objfiles/kerasm.o
 #### gcc -m32 -c kernel/source/kernel.c -o kernel/objfiles/kerc.o -ffreestanding
 #### gcc -m32 -c includes/system.c -o objfiles/system.o -ffreestanding 

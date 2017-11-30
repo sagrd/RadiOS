@@ -1,7 +1,7 @@
 # RadiOS
 [INCOMPLETE]
 
-A very primarily ~~Operating System~~ written for educational purposes.
+A very primitive nano ~~Operating System~~ written for educational purposes.
 
 Dependencies:
 

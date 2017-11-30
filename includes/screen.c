@@ -89,7 +89,7 @@ void printch(char ch){
                 cursorY++;
                 break;
         default:
-                vidmem [((cursorY * sw + cursorX))*sd] = c;
+                vidmem [((cursorY * sw + cursorX))*sd] = ch;
                 //colour 0 -white F- black
                 vidmem [((cursorY * sw + cursorX))*sd+1] = 0x0F;
                 cursorX++; 

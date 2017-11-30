@@ -1,23 +1,20 @@
-### To Start Please run /build.sh
-
 # RadiOS [incomplete]
 Radios is a very primitive nano ~~Operating System~~ written for educational purposes.
 
 ## Screenshot
-![alt text](http://url/to/img.png)
 ![ScreenShot](screenshot/radios1.png)
 ![ScreenShot](screenshot/radios2.png)
 
 ## Getting Started
 
-To get the project up and running on your local machine for development and testing purposes, run 
+To get the project up and running on your local machine for development and testing purposes
 
 ```
-./build.sh
+run build.sh
 ```
 For end user to test the program:
 ```
-Install disk_images/radios.iso in virtualbox
+install disk_images/radios.iso in virtualbox
 ```
 
 ### Prerequisites
@@ -36,22 +33,22 @@ What things you need to install the software and how to install them
 ### Installing
 
 ```
- nasm -f elf32 kernel/source/kernel.asm -o kernel/objfiles/kerasm.o
- gcc -m32 -c kernel/source/kernel.c -o kernel/objfiles/kerc.o -ffreestanding
- gcc -m32 -c includes/system.c -o objfiles/system.o -ffreestanding 
- gcc -m32 -c includes/string.c -o objfiles/string.o -ffreestanding 
- gcc -m32 -c includes/keyboard.c -o objfiles/keyboard.o -ffreestanding 
- gcc -m32 -c includes/screen.c -o objfiles/screen.o -ffreestanding 
- ld -m elf_i386 -T linker/link.ld -o kernel/kernel.bin kernel/objfiles/kerasm.o kernel/objfiles/kerc.o objfiles/system.o objfiles/string.o objfiles/screen.o objfiles/keyboard.o
- qemu-system-i386 -kernel kernel/kernel.bin
- grub-mkrescue -o disk_images/radios.iso kernel/kernel.bin
+1. nasm -f elf32 kernel/source/kernel.asm -o kernel/objfiles/kerasm.o
+2. gcc -m32 -c kernel/source/kernel.c -o kernel/objfiles/kerc.o -ffreestanding
+3. gcc -m32 -c includes/system.c -o objfiles/system.o -ffreestanding 
+4. gcc -m32 -c includes/string.c -o objfiles/string.o -ffreestanding 
+5. gcc -m32 -c includes/keyboard.c -o objfiles/keyboard.o -ffreestanding 
+6. gcc -m32 -c includes/screen.c -o objfiles/screen.o -ffreestanding 
+7. ld -m elf_i386 -T linker/link.ld -o kernel/kernel.bin kernel/objfiles/kerasm.o kernel/objfiles/kerc.o objfiles/system.o objfiles/string.o objfiles/screen.o objfiles/keyboard.o
+8. qemu-system-i386 -kernel kernel/kernel.bin
+9. grub-mkrescue -o disk_images/radios.iso kernel/kernel.bin
 ```
 
 
 ## Built With
 
-* [Assembly] - The starting point for kernel
-* [C Programming Language] - everything else
+* [x86 Assembly](https://en.wikipedia.org/wiki/X86_assembly_language) - starting point for kernel
+* [C Programming Language](https://en.wikipedia.org/wiki/C_(programming_language)) - everything else
 
 ## Author
 

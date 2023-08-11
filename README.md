@@ -2,8 +2,8 @@
 Radios is a very primitive nano ~~Operating System~~ written for educational purposes.
 
 ## Screenshot
-![Sagar Dhungel](screenshot/radios1.png)
-![Sagar Dhungel](screenshot/radios2.png)
+!(screenshot/radios1.png)
+!(screenshot/radios2.png)
 
 ## Getting Started
 
@@ -49,10 +49,6 @@ What things you need to install the software and how to install them
 
 * [x86 Assembly](https://en.wikipedia.org/wiki/X86_assembly_language) - starting point for kernel
 * [C Programming Language](https://en.wikipedia.org/wiki/C_(programming_language)) - everything else
-
-## Author
-
-* **Sagar Dhungel** - [Journal](https://sagardhungel.com.np/about) - [email](mailto:mail@sagardhungel.com.np)
 
 ## ToDos
 uff.

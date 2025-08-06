@@ -2,8 +2,7 @@
 Radios is a very primitive nano ~~Operating System~~ written for educational purposes.
 
 ## Screenshot
-!(screenshot/radios1.png)
-!(screenshot/radios2.png)
+![image](screenshot/radios1.png)
 
 ## Getting Started
 
